@@ -2,11 +2,14 @@ import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
 import { Check } from 'phosphor-react'
 import { clsx } from 'clsx'
 
-export interface CheckboxProps {}
+export interface CheckboxProps extends CheckboxPrimitive.CheckboxProps {}
 
 export function Checkbox(props: CheckboxProps) {
   return (
-    <CheckboxPrimitive.Root className="w-6 h-6 p-[.125rem] bg-gray-800 rounded">
+    <CheckboxPrimitive.Root
+      className="w-6 h-6 p-[.125rem] bg-gray-800 rounded"
+      {...props}
+    >
       <CheckboxPrimitive.Indicator
         className="flex items-center justify-center overflow-y-hidden"
         asChild

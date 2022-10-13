@@ -34,6 +34,9 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        blur: 'url(/src/assets/pattern-dots.png)',
+      },
       fontFamily: {
         sans: 'Inter, sans-serif',
       },

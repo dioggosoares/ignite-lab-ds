@@ -10,12 +10,10 @@ export default {
   decorators: [
     (Story) => {
       return (
-        <div id="Remember" className="flex items-center gap-2">
+        <label htmlFor="remember" className="flex items-center gap-2">
           {Story()}
-          <Text size="sm" asChild>
-            <label htmlFor="Remember">Lembrar de mim por 30 dias</label>
-          </Text>
-        </div>
+          <Text size="sm">Lembrar de mim por 30 dias</Text>
+        </label>
       )
     },
   ],

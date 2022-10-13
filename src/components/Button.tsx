@@ -1,9 +1,11 @@
+import { ButtonHTMLAttributes } from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { clsx } from 'clsx'
 
-export interface ButtonProps {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: string
   asChild?: boolean
+  className?: string
   variant?:
     | 'primary'
     | 'secondary'
@@ -17,6 +19,8 @@ export function Button({
   children,
   asChild = false,
   variant = 'primary',
+  className,
+  ...props
 }: ButtonProps) {
   const Comp = asChild ? Slot : 'button'
 
@@ -38,7 +42,9 @@ export function Button({
           'bg-cyan-500 text-black opacity-10 cursor-not-allowed':
             variant === 'disabled',
         },
+        className,
       )}
+      {...props}
     >
       {children}
     </Comp>
