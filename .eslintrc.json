@@ -1,5 +1,5 @@
 {
-  "extends": "@rocketseat/eslint-config/react",
+  "extends": "@primittive/eslint-config/react",
   "rules": {
     "no-unused-vars": "off",
     "no-undef": "off"
