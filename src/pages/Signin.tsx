@@ -1,12 +1,12 @@
 import { FormEvent, useState } from 'react'
 import axios from 'axios'
-import { Checkbox } from '@radix-ui/react-checkbox'
 import { Envelope, Lock } from 'phosphor-react'
 import { Button } from '../components/Button'
 import { Heading } from '../components/Heading'
 import { Logo } from '../components/Logo'
 import { Text } from '../components/Text'
 import { TextInput } from '../components/TextInput'
+import { Checkbox } from '../components/Checkbox'
 
 export function Signin() {
   const [isUserSignedIn, setIsUserSignedIn] = useState(false)
@@ -77,8 +77,8 @@ export function Signin() {
         </label>
 
         <label htmlFor="remember" className="flex items-center gap-4">
-          <Checkbox id="remember" />
-          <Text size="sm" className="text-gray-200">
+          <Checkbox />
+          <Text size="sm" aria-labelledby="remember" className="text-gray-200">
             Lembrar de mim por 30 dias
           </Text>
         </label>
