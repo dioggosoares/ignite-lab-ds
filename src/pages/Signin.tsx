@@ -25,7 +25,14 @@ export function Signin() {
   return (
     <div className="w-screnn h-screen flex flex-col gap-10 items-center justify-center mx-auto text-gray-100 bg-blur bg-cover bg-no-repeat">
       <header className="flex flex-col items-center">
-        <Logo />
+        {/* <Logo /> */}
+        <iframe
+          style={{ border: 'none' }}
+          width="130"
+          height="130"
+          src="https://rive.app/s/2y2VxCzZ6kWuMQVQHXvc_g/embed"
+          allowFullScreen
+        ></iframe>
 
         <Heading size="lg" className="mt-4">
           Ignite Lab
