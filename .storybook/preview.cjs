@@ -3,8 +3,13 @@ import { initialize, mswDecorator } from 'msw-storybook-addon'
 
 import '../src/styles/global.scss'
 
+const isDevelopment = window. CONFIG_TYPE === 'DEVELOPMENT';
+
 initialize({
-  onUnhandledRequest: 'bypass'
+  onUnhandledRequest: 'bypass',
+  serviceworker: {
+    url: isDevelopment ? 'mockServiceWorker.js' : '/ignite-lab-ds/mockServiceWorker.js'
+  }
 });
 
 export const decorators = [mswDecorator];
