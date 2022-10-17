@@ -7,7 +7,7 @@ const isDevelopment = window.CONFIG_TYPE === 'DEVELOPMENT';
 
 initialize({
   onUnhandledRequest: 'bypass',
-  serviceworker: {
+  serviceWorker: {
     url: isDevelopment ? 'mockServiceWorker.js' : '/ignite-lab-ds/mockServiceWorker.js'
   }
 });
