@@ -3,7 +3,7 @@ import { initialize, mswDecorator } from 'msw-storybook-addon'
 
 import '../src/styles/global.scss'
 
-const isDevelopment = window. CONFIG_TYPE === 'DEVELOPMENT';
+const isDevelopment = window.CONFIG_TYPE === 'DEVELOPMENT';
 
 initialize({
   onUnhandledRequest: 'bypass',
